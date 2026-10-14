@@ -1,40 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Form</title>
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Home Page</title>
-    </head>
+    <h1>Volunteer Form</h1>
+
+    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+        
     
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    
-                     <li><a href="index.html">index.html</a></li>
-                     <li><a href="resume.html">resume.html</a></li>
-                     <li><a href="page3.html">page3.html</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h1>My Home Page</h1>
-        <main>
-      <h1>Welcome to My Homepage!</h1>
-      <p>Here you can find my future career aspirations, favorite sports and players, and a sick picture of spidey</p>
-      
-      <h2>Future Career</h2>
-      <p>When I get my ITM degree, I want to get into IT support as my career path.</p>
-      
-      <h3>My Top 3 Fav Sports &amp; players</h3>
-      <ul>
-        <li>1. Basketball / Lebron James</li>
-        <li>2. Football / Tom Brady</li>
-        <li>3. UFC / Nate Diaz</li>
-      </ul>
+        <fieldset>
+            <legend>My Info</legend>
+            
+            <p>
+                <label for="first_name">first name:</label>
+                <input type="text" id="first_name" name="first_name_field">
+            </p>
+            
+            <p>
+                <label for="last_name">last name:</label>
+                <input type="text" id="last_name" name="last_name_field">
+            </p>
+            
+            <p>
+                <label for="phone">phone:</label>
+                <input type="text" id="phone" name="phone_field">
+            </p>
+            
+            <p>
+                <label for="email">email:</label>
+                <input type="text" id="email" name="email_field">
+            </p>
+            
+            <p>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender_field" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender_field" value="female">
+                <label for="female">Female</label>
+            </p>
+            
+            <p>
+                <label for="age">Age:</label>
+                <select id="age" name="age_field">
+                    <option value="under 18">under 18</option>
+                    <option value="over 18">over 18</option>
+                </select>
+            </p>
+        </fieldset>
 
-      <h2>Cool Spiderman Picture</h2>
-      <p>Does whatever a spider can:</p>
-      <img src="images/spiderman.jpg" alt="The GOAT Superhero">
-    </main>
-    </body>
+        <fieldset>
+            <legend>My Availability</legend>
+            
+            <p><strong>Days Available:</strong></p>
+            
+            <p>
+                <input type="checkbox" id="sunday" name="available_field[]" value="sunday">
+                <label for="sunday">Sunday</label><br>
+                
+                <input type="checkbox" id="monday" name="available_field[]" value="monday">
+                <label for="monday">Monday</label><br>
+                
+                <input type="checkbox" id="tuesday" name="available_field[]" value="tuesday">
+                <label for="tuesday">Tuesday</label><br>
+                
+                <input type="checkbox" id="wednesday" name="available_field[]" value="wednesday">
+                <label for="wednesday">Wednesday</label><br>
+                
+                <input type="checkbox" id="thursday" name="available_field[]" value="thursday">
+                <label for="thursday">Thursday</label><br>
+                
+                <input type="checkbox" id="friday" name="available_field[]" value="friday">
+                <label for="friday">Friday</label><br>
+                
+                <input type="checkbox" id="saturday" name="available_field[]" value="saturday">
+                <label for="saturday">Saturday</label>
+            </p>
+            
+            <p>
+                <label for="comments">Comments</label><br>
+                <textarea id="comments" name="comments_field" rows="4" cols="30"></textarea>
+            </p>
+        </fieldset>
+        <input type="hidden" name="hidden_field" value="Jordan Brinson">
+
+        <p>
+            <input type="submit" value="Submit Query">
+        </p>
+
+    </form>
+
+</body>
 </html>
